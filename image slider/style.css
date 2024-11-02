@@ -9,6 +9,10 @@ body{
     overflow: hidden;
 }
 
+@media (max-width: 480px) {
+    /* Styles for mobile screens */
+}
+
 
 .container{
     position: absolute;

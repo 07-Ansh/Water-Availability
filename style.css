@@ -23,6 +23,9 @@ body::before {
     z-index: -1;
     filter: brightness(60%);
 }
+@media (max-width: 480px) {
+    /* Styles for mobile screens */
+}
 
 /* Header */
 header {
