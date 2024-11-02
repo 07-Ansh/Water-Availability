@@ -210,7 +210,7 @@ header nav a:hover {
 footer {
     background-color: rgba(0, 0, 0, 0.7);
     text-align: center;
-    padding: 1rem;
+    padding: 4rem;
     color: #ccc;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -285,7 +285,6 @@ transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 *:focus,
