@@ -1,0 +1,396 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #0a0a0a;
+}
+
+/* Background Image for Parallax Effect */
+body::before {
+    content: "";
+    background: url(images/o3.jpg) no-repeat center center/cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    filter: brightness(60%);
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif; /* Font family */
+      color: #597ca1; /* Dark color for contrast */
+      font-weight: 700; /* Bold weight */
+
+}
+
+header nav a {
+    margin: 0 0.8rem;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header nav .cta {
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif; /* Font family */
+      color: #5f81a5; /* Dark color for contrast */
+      font-weight: 700; /* Bold weight */}
+
+header nav a:hover {
+    color: #1e90ff;
+}
+
+/* Hero Section with Parallax */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    margin: 2rem;
+    animation: fadeIn 1s ease-out;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    margin-bottom: 1.5rem;
+}
+
+.hero-content button {
+    background: #425c77;
+    padding: 0.7rem 1.2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif; /* Font family */
+      color: #f9f9f9;
+      font-weight: 700; /* Bold weight */
+    
+}
+
+.hero-content button:hover {
+    background: #0f5a8a;
+    transform: scale(1.1);
+}
+
+/* Hero Links with Icon Animation */
+.hero-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 700px;
+}
+
+.hero-links .link {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.hero-links .link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #1e90ff;
+    transform: translateY(-5px);
+}
+
+/* Services Section */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 3rem 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.service-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    margin: 1rem;
+    width: calc(100% / 3 - 2rem);
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.service-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Project Team Section */
+.project-team {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.team-member {
+    display: inline-block;
+    width: calc(80% / 3 - 2rem);
+    margin: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.team-member img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+        margin-left: 30%;
+        margin-bottom: 1%;
+
+}
+
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 1rem;
+    color: #ccc;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .service-card, .team-member {
+        width: calc(50% - 2rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .services, .team-member {
+        width: 100%;
+    }
+
+    .hero-links {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.4rem;
+    }
+
+    .header nav a {
+        font-size: 0.9rem;
+    }
+
+    .service-card, .team-member {
+        width: 90%;
+        margin: 0.5rem auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+/*footer*/
+
+
+/* google fonts  */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/* 
+transition 
+
+transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus,
+*:active {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+.wrapper {
+    display: inline-flex;
+    color: #000000;
+    list-style: none;
+    margin: auto;
+    }
+
+.wrapper .icon {
+    position: relative;
+    background: #88a1ae;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.346);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgb(0, 0, 0);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #ffffff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgb(0, 0, 0);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+    background: #1877F2;
+    color: #fff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+    background: #000;
+    color: #fff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+    background: #e94261;
+    color: #ffffff;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+    background: #333333;
+    color: #ffffff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+    background: #CD201F;
+    color: #ffffff;
+}
+
+
+.contact{
+    margin-bottom: 1%;
+}
+
