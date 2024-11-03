@@ -251,46 +251,31 @@ footer {
     justify-content: center;
 }
 
+.wrapper {
+    display: inline-flex;
+    color: #000000;
+    list-style: none;
+    margin: auto;
+    }
+
 .wrapper .icon {
+    position: relative;
     background: #88a1ae;
     border-radius: 50%;
     padding: 15px;
     margin: 10px;
     width: 50px;
     height: 50px;
+    font-size: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.346);
+    cursor: pointer;
     transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-@media (max-width: 768px) {
-    .wrapper .icon {
-        padding: 12px;
-        margin: 5px;
-        width: 40px;
-        height: 40px;
-    }
-}
-
-/* Mobile styles */
-@media (max-width: 768px) {
-    .wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center; /* Center the icons on small screens */
-        gap: 10px; /* Space between icons */
-    }
-
-    .wrapper .icon {
-        padding: 12px; /* Reduce padding for smaller screens */
-        margin: 5px; /* Reduce margin for compactness */
-        width: 40px; /* Make icons slightly smaller */
-        height: 40px;
-        font-size: 16px; /* Adjust font size */
-        box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3); /* Slightly reduce shadow */
-    }
-}
 .wrapper .tooltip {
     position: absolute;
     top: 0;
@@ -367,4 +352,3 @@ footer {
 .contact{
     margin-bottom: 1%;
 }
-
