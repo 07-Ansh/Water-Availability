@@ -11,7 +11,6 @@ body {
     background-color: #0a0a0a;
 }
 
-/* Background Image for Parallax Effect */
 body::before {
     content: "";
     background: url(images/o3.jpg) no-repeat center center/cover;
@@ -23,11 +22,8 @@ body::before {
     z-index: -1;
     filter: brightness(60%);
 }
-@media (max-width: 480px) {
-    /* Styles for mobile screens */
-}
 
-/* Header */
+/* Base styles */
 header {
     display: flex;
     justify-content: space-between;
@@ -36,17 +32,15 @@ header {
     background-color: rgba(0, 0, 0, 0.7);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
+    flex-wrap: wrap;
 }
 
 header .logo {
     font-size: 1.8rem;
-    font-weight: bold;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Montserrat', sans-serif;
+    color: #597ca1;
+    font-weight: 700;
     cursor: pointer;
-    font-family: 'Montserrat', sans-serif; /* Font family */
-      color: #597ca1; /* Dark color for contrast */
-      font-weight: 700; /* Bold weight */
-
 }
 
 header nav a {
@@ -56,19 +50,23 @@ header nav a {
     transition: color 0.3s;
 }
 
-header nav .cta {
-    font-weight: bold;
-    font-family: 'Times New Roman', Times, serif;
-    cursor: pointer;
-    font-family: 'Montserrat', sans-serif; /* Font family */
-      color: #5f81a5; /* Dark color for contrast */
-      font-weight: 700; /* Bold weight */}
-
 header nav a:hover {
     color: #1e90ff;
 }
 
-/* Hero Section with Parallax */
+/* Responsive adjustments for header */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    header > * {
+        margin: 0.5rem 0;
+    }
+}
+
+/* Hero Section */
 .hero {
     display: flex;
     flex-direction: column;
@@ -77,7 +75,8 @@ header nav a:hover {
     text-align: center;
     background: rgba(0, 0, 0, 0.4);
     border-radius: 15px;
-    margin: 2rem;
+    margin: 2rem auto;
+    max-width: 90vw;
     animation: fadeIn 1s ease-out;
 }
 
@@ -96,16 +95,11 @@ header nav a:hover {
     border: none;
     cursor: pointer;
     border-radius: 8px;
-    font-weight: bold;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #f9f9f9;
+    font-weight: 700;
     transition: background 0.3s, transform 0.3s;
-    font-size: 1.8rem;
-    font-weight: bold;
-    font-family: 'Times New Roman', Times, serif;
-    cursor: pointer;
-    font-family: 'Montserrat', sans-serif; /* Font family */
-      color: #f9f9f9;
-      font-weight: 700; /* Bold weight */
-    
 }
 
 .hero-content button:hover {
@@ -113,25 +107,38 @@ header nav a:hover {
     transform: scale(1.1);
 }
 
-/* Hero Links with Icon Animation */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Hero Links */
 .hero-links {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     margin-top: 2rem;
     width: 100%;
     max-width: 700px;
+    gap: 1rem; /* Adds space between links */
 }
 
 .hero-links .link {
     background-color: rgba(255, 255, 255, 0.1);
     padding: 0.5rem 1rem;
-    margin: 0 0.5rem;
     cursor: pointer;
     border-radius: 8px;
     text-align: center;
     font-weight: bold;
     transition: background 0.3s;
+    width: 150px; /* Fixed width for uniformity */
+    white-space: nowrap; /* Prevents text wrapping */
 }
 
 .hero-links .link:hover {
@@ -140,11 +147,24 @@ header nav a:hover {
     transform: translateY(-5px);
 }
 
+/* Stack links vertically on smaller screens */
+@media (max-width: 768px) {
+    .hero-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    .hero-links .link {
+        width: 100%; /* Full width in vertical layout */
+        max-width: 250px; /* Optional: Adds padding from edges */
+    }
+}
 /* Services Section */
 .services {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     padding: 3rem 2rem;
     background-color: rgba(0, 0, 0, 0.5);
 }
@@ -165,11 +185,16 @@ header nav a:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-.service-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 8px;
+@media (max-width: 1024px) {
+    .service-card {
+        width: calc(50% - 2rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .service-card {
+        width: 90%;
+    }
 }
 
 /* Project Team Section */
@@ -190,136 +215,85 @@ header nav a:hover {
     transition: transform 0.3s, background-color 0.3s;
 }
 
-.team-member:hover {
-    transform: translateY(-10px);
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
 .team-member img {
     width: 130px;
     height: 130px;
     object-fit: cover;
     border-radius: 50%;
-        margin-left: 30%;
-        margin-bottom: 1%;
-
+    margin: auto;
 }
 
+@media (max-width: 768px) {
+    .team-member {
+        width: 90%;
+        margin: 0.5rem auto;
+    }
+}
 
 /* Footer */
 footer {
     background-color: rgba(0, 0, 0, 0.7);
     text-align: center;
     padding: 4rem;
-    height: auto;
     color: #ccc;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Animations */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive Styles */
-@media (max-width: 1024px) {
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .service-card, .team-member {
-        width: calc(50% - 2rem);
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 1.8rem;
-    }
-
-    .services, .team-member {
-        width: 100%;
-    }
-
-    .hero-links {
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-content h1 {
-        font-size: 1.4rem;
-    }
-
-    .header nav a {
-        font-size: 0.9rem;
-    }
-
-    .service-card, .team-member {
-        width: 90%;
-        margin: 0.5rem auto;
-    }
-}
-
-
-
-
-
-
-
-
-
-/*footer*/
-
-
-/* google fonts  */
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
-/* 
-transition 
-
-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-*/
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-*:focus,
-*:active {
-    outline: none !important;
-    -webkit-tap-highlight-color: transparent;
-}
-
-
+/* Wrapper */
 .wrapper {
     display: inline-flex;
-    color: #000000;
+    color: #000;
     list-style: none;
     margin: auto;
-    }
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
 .wrapper .icon {
-    position: relative;
     background: #88a1ae;
     border-radius: 50%;
     padding: 15px;
     margin: 10px;
     width: 50px;
     height: 50px;
-    font-size: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.346);
-    cursor: pointer;
     transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
+@media (max-width: 768px) {
+    .wrapper .icon {
+        padding: 12px;
+        margin: 5px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center the icons on small screens */
+        gap: 10px; /* Space between icons */
+    }
+
+    .wrapper .icon {
+        padding: 12px; /* Reduce padding for smaller screens */
+        margin: 5px; /* Reduce margin for compactness */
+        width: 40px; /* Make icons slightly smaller */
+        height: 40px;
+        font-size: 16px; /* Adjust font size */
+        box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3); /* Slightly reduce shadow */
+    }
+}
 .wrapper .tooltip {
     position: absolute;
     top: 0;
