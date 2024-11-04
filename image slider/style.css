@@ -26,9 +26,9 @@ body{
 
 .container .slide .item{
     width: 200px;
-    height: 300px;
+    height: 200px;
     position: absolute;
-    top: 50%;
+    top: 70%;
     transform: translate(0, -50%);
     border-radius: 20px;
     box-shadow: 0 30px 50px #222222;
@@ -65,8 +65,8 @@ body{
 
 .item .content{
     position: absolute;
-    top: 50%;
-    left: 100px;
+    top: 45%;
+    left: 90px;
     width: 300px;
     text-align: left;
     color: #eee;
@@ -86,9 +86,10 @@ body{
 
 
 .content .name{
-    font-size: 40px;
+    font-size: 50px;
     text-transform: uppercase;
     font-weight: bold;
+    width: 400px;
     opacity: 0;
     animation: animate 1s ease-in-out 1 forwards;
 }
@@ -147,4 +148,28 @@ body{
     background: #ff7b00;
     color: #5c789c;
 
+}
+
+ @media screen and (max-width: 678px) {
+    .item .content{
+        position: absolute;
+        top: 37%;
+        left: 40px;
+        width: 300px;
+        text-align: left;
+        color: #eee;
+        transform: translate(0, -50%);
+        font-family: system-ui;
+        display: none;
+    }
+    .content .name{
+        font-size: 40px;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: left;
+        opacity: 0;
+        width: 300px;
+        animation: animate 1s ease-in-out 1 forwards;
+    }
+    
 }
