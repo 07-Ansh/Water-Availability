@@ -565,4 +565,18 @@ iframe {
     background-color: rgba(28, 37, 54, 0.4); /* Dark blue tone with 40% opacity */
         pointer-events: none;
 }
+.header__title{
+text-size-adjust: 100%;
+overflow-wrap: break-word;
 
+color: rgb(127, 141, 157);
+box-sizing: border-box;
+font-family: "Playfair Display", Georgia, "Times New Roman", "Liberation Serif", serif;
+line-height: 1.2;
+font-weight: 600;
+letter-spacing: -0.01rem;
+display: inline;
+margin: 0px 16px 40px 0px;
+font-size: 2.5rem;
+
+}
