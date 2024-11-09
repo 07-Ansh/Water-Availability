@@ -404,143 +404,6 @@ footer {
 }
 
 
-/* countries*/
-
-/* Water Availability Section with Country Cards */
-.water-data {
-    padding: 3rem 2rem;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.country-card {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 1.5rem;
-    margin: 1.5rem 0;
-    max-width: 900px;
-    margin: 1.5rem auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s;
-    color: #ddd;
-}
-
-.country-card:hover {
-    transform: translateY(-5px);
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.country-img {
-    width: 200px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-right: 1.5rem;
-}
-
-.country-content h3 {
-    color: #bfc1c3;
-    font-size: 24px;
-    margin-bottom: 0.5rem;
-}
-
-.country-content p {
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-    .country-card {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .country-img {
-        margin: 0 0 1rem 0;
-        width: 100%;
-    }
-}
-
-.country-grid a {
-    text-decoration: none; /* Remove underline from the link */
-    color: inherit; /* Inherit text color */
-}
-
-.country-card {
-    width: 300px;
-    height: 300px;  /* Square box */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center text vertically */
-    align-items: center;     /* Center text horizontally */
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s;
-    color: #ddd;
-    text-align: center; /* Center-align text within the box */
-}
-
-.country-card:hover {
-    transform: translateY(-5px);
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-
-.country-grid {
-    display: flex;
-    gap: 1.5rem;
-    overflow-x: auto; /* Enable horizontal scrolling */
-    padding-bottom: 1rem; /* Add padding for scroll visibility */
-    scroll-snap-type: x mandatory; /* Smooth snap scrolling */
-}
-
-.country-card {
-    min-width: 300px; /* Fixed width for consistent box size */
-    height: 300px; /* Square box */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s;
-    color: #ddd;
-    text-align: center;
-    scroll-snap-align: center; /* Center box on scroll */
-}
-
-.country-card:hover {
-    transform: translateY(-5px);
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-/* Adjust inner text styles */
-.country-content h3 {
-    color: #bfc1c3;
-    font-size: 20px;
-    margin-bottom: 0.5rem;
-}
-
-.country-content p {
-    font-size: 14px;
-    line-height: 1.4;
-}
-
-
-/* Title for Water Availability in America */
-.water-data .title {
-    font-size: 28px;
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
 iframe {
     filter: invert(1) hue-rotate(180deg);
 }
@@ -568,7 +431,6 @@ iframe {
 .header__title{
 text-size-adjust: 100%;
 overflow-wrap: break-word;
-
 color: rgb(127, 141, 157);
 box-sizing: border-box;
 font-family: "Playfair Display", Georgia, "Times New Roman", "Liberation Serif", serif;
@@ -578,5 +440,9 @@ letter-spacing: -0.01rem;
 display: inline;
 margin: 0px 16px 40px 0px;
 font-size: 2.5rem;
+
+}
+.project-team-h1{
+    font-family: "Playfair Display", Georgia, "Times New Roman", "Liberation Serif", serif;
 
 }
